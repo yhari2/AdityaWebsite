@@ -1,4 +1,5 @@
 {% load staticfiles %}
+<script src="{% static 'js/index.js' %}"></script>
 
 <html>
     <head>
@@ -6,34 +7,43 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+        
     </head>
+
+
     <body>
         <h1 id="page-title">Aditya Peri</h1>
 
-        <p> 
-           $62,000
-        </p>
+        <div class="container">
+            <div class="row">
+                {% for post in posts%}
 
-        <!-- random image, proof of concept -->
-        <img src="http://farm2.static.flickr.com/1069/532586595_5401bebebd.jpg"/> 
+                    <div class="col-md-4">
+                    <div class="image-post">
+                        <div>
+                            <img class="image" src="{{ post.imgURL }}">
+                        </div>
 
-        <div class="subheader">
-    <div class="subheader-title">Me</div>
-    <div class= "subheader-description">
-        Intimite description, potentially dick pics
-    </div>
-</div>
-<div class= "subheader">
-    <div class= "subheader-title">Something</div>
-    <div class= "subheader-description">
-        You tell me what goes here, brother.
-    </div>
-</div>
-<div class= "subheader">
-    <div class= "subheader-title" > Something else</div>
-    <div class= "subheader-description">
-         More dick pics
-    </div>
-</div>
+                        <div class="caption-text">
+                            {{ post.caption }}
+                        </div class="date-text">
+                            <div class="postedby-text">
+                                Posted on {{ post.postedBy }}
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+
+
+        <!-- Bootstrap is now enabled-->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     </body>
+
+
 </html>
