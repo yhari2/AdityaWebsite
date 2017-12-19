@@ -18,8 +18,10 @@ from django.contrib import admin
 
 
 from adityasite.views import HomePage
+from adityasite.AboutMePage import AboutMePage
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', HomePage.as_view())
+    url(r'', HomePage.as_view()),
+    url(r'post/', AboutMePage.as_view())
 ]

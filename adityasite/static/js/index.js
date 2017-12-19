@@ -1,1 +1,3 @@
-console.log("woo")
+ $(document).ready(function(){
+      $('.carousel').carousel();
+    });

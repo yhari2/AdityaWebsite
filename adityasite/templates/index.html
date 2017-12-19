@@ -1,49 +1,38 @@
 {% load staticfiles %}
 <script src="{% static 'js/index.js' %}"></script>
 
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Adi Buddy Art</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+   <h1 >
+       Art by Aditya Peri
+   </h1>
+
+   <nav>
+
+     <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Logo</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+
+         <li><a href="sass.html">Videos</a></li>
+         <li><a href="sass.html">Portfolio</a></li>
+         <li><a href="sass.html">Instagram</a></li>
+         <li><a href="sass.html">Store</a></li>
+         <li><a href="AboutMePage.html">About Me</a></li>      
+
+     </div>
+
+       <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="https://www.google.com/search?q=tariq+trotter&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj26OHhkZXYAhWEdN8KHa8sAHkQ_AUICygC&biw=1440&bih=826#imgrc=IQ_EroIsBJ5iEM:"></a>
+        <a class="carousel-item" href="#two!"><img src="https://www.google.com/search?q=tariq+trotter&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj26OHhkZXYAhWEdN8KHa8sAHkQ_AUICygC&biw=1440&bih=826#imgrc=IQ_EroIsBJ5iEM:"></a>
+        <a class="carousel-item" href="#three!"><img src="https://www.google.com/search?q=tariq+trotter&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj26OHhkZXYAhWEdN8KHa8sAHkQ_AUICygC&biw=1440&bih=826#imgrc=IQ_EroIsBJ5iEM:"></a>
+        <a class="carousel-item" href="#four!"><img src="https://www.google.com/search?q=tariq+trotter&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj26OHhkZXYAhWEdN8KHa8sAHkQ_AUICygC&biw=1440&bih=826#imgrc=IQ_EroIsBJ5iEM:"></a>
+        <a class="carousel-item" href="#five!"><img src="https://www.google.com/search?q=tariq+trotter&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj26OHhkZXYAhWEdN8KHa8sAHkQ_AUICygC&biw=1440&bih=826#imgrc=IQ_EroIsBJ5iEM:"></a>
+      </div>
+      
+   </nav>
         
-    </head>
-
-
-    <body>
-        <h1 id="page-title">Aditya Peri</h1>
-
-        <div class="container">
-            <div class="row">
-                {% for post in posts%}
-
-                    <div class="col-md-4">
-                    <div class="image-post">
-                        <div>
-                            <img class="image" src="{{ post.imgURL }}">
-                        </div>
-
-                        <div class="caption-text">
-                            {{ post.caption }}
-                        </div class="date-text">
-                            <div class="postedby-text">
-                                Posted on {{ post.postedBy }}
-                            </div>
-                        </div>
-                    </div>
-
-                {% endfor %}
-
-            </div>
-        </div>
-
-
-        <!-- Bootstrap is now enabled-->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    </body>
-
-
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </html>
