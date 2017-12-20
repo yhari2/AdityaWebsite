@@ -9,7 +9,3 @@ class HomePage(View):
         context["posts"] = postsList
         return render(request, 'index.html', context)
 
-
-class AboutMePage(View):
-    def get(self, request):
-        return render(request, 'templates/AboutMePage.html')

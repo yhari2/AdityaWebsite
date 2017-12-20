@@ -19,9 +19,11 @@ from django.contrib import admin
 
 from adityasite.views import HomePage
 from adityasite.AboutMePage import AboutMePage
+from adityasite.Portfolio import Portfolio
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', HomePage.as_view()),
-    url(r'post/', AboutMePage.as_view())
+    url(r'^$', HomePage.as_view()),   # '^$' means start and end without seeing anything
+    url(r'AboutMePage', AboutMePage.as_view()), # handles the about me page
+    url(r'Portfolio', Portfolio.as_view()), # handles Portfolio page
 ]
